@@ -6,5 +6,5 @@ Windows/mac install Linux environment
 3. Download and install Oracle Extension Package
 
 On Linux:
-1. install openCV (https://www.learnopencv.com/install-opencv3-on-ubuntu/)
+1. install openCV (http://www.codebind.com/linux-tutorials/install-opencv-ubuntu-18-04-lts-python/)
 
