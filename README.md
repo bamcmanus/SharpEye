@@ -7,7 +7,7 @@ Windows/mac install Linux environment
 
 On Linux:
 1. install openCV (http://www.codebind.com/linux-tutorials/install-opencv-ubuntu-18-04-lts-python/)
-2. Add these lines before step 2: 
+2. Add these lines before step 2
     a. sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
     b. sudo apt update
     c. sudo apt install libjasper1 libjasper-dev
