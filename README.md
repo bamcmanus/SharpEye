@@ -7,8 +7,9 @@ Windows/mac install Linux environment
 
 On Linux:
 1. install openCV (http://www.codebind.com/linux-tutorials/install-opencv-ubuntu-18-04-lts-python/)
-Add these lines before step 2: 
-sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
-sudo apt update
-sudo apt install libjasper1 libjasper-dev
+2. Add these lines before step 2: 
+    a. sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
+    b. sudo apt update
+    c. sudo apt install libjasper1 libjasper-dev
+    d. sudo apt-get install libcanberra-gtk-module:i386
 
