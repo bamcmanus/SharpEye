@@ -10,7 +10,10 @@ On Linux:
 2. Add these lines before step 2 in the above link:
 
     a. sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
+    
     b. sudo apt update
+    
     c. sudo apt install libjasper1 libjasper-dev
+    
     d. sudo apt-get install libcanberra-gtk-module:i386
 
