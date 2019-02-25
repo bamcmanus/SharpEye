@@ -17,3 +17,4 @@ On Linux:
     
     d. sudo apt-get install libcanberra-gtk-module:i386
 
+    e. in step 2 of link replace python3.5-dev with python 3.6-dev
