@@ -230,7 +230,8 @@ def load_FRmodel():
 # Parameters:   none
 # Returns:      dictionary  database of loaded users or empty dictionary
 def ini_user_database():
-    user_db = {}
+    #user_db = {}
+    user_db = dict()
 
     # check for existing database
     if os.path.exists('database/user_dict.pickle'):
@@ -245,7 +246,8 @@ def ini_user_database():
 #               model       model used for the encoding of image to vector
 # Returns:      void
 def add_user(user_db, model, name):
-    face_found = detect_face(user_db, model)
+    #face_found = detect_face(user_db, model)
+    face_found = detect_face()
 
     if face_found:
         resize_img("saved_image/1.jpg")
@@ -266,7 +268,9 @@ def add_user(user_db, model, name):
 # Returns:      void
 def add_user_img_path(user_db, model, name, img_path):
     if name not in user_db:
-        user_db[name] = img_to_encoding(img_path, model)  
+        user_db[name] = []
+        #user_db[name] = img_to_encoding(img_path, model)  
+        user_db[name].append(img_to_encoding(img_path, model))
         filename = 'database/user_dict.pickle'  
         dirname = os.path.dirname(filename)
         
@@ -280,8 +284,10 @@ def add_user_img_path(user_db, model, name, img_path):
 
         print('User ' + name + ' added successfully')
     else:
-    #Figure out how to change one to one mapping to one to list
-        print('Picture added to existing user.')
+        #Figure out how to change one to one mapping to one to list
+        #user_db[name].append(img_to_encoding(img_path,model))
+        #print('Picture added to existing user.')
+        print('Requires implementation')
         
 
 # Deletes a registered user from database
@@ -353,16 +359,14 @@ if __name__ == '__main__':
         # User selected add or delete user from db
         elif user_option == '2':
             os.system('cls' if os.name == 'nt' else 'clear')
-            print(
-                '1. Add user using saved image path\n2. Add user using Webcam\n3. Delete user\n')
+            print('1. Add user using saved image path\n2. Add user using Webcam\n3. Delete user\n')
 
             option = input()
             name = input('Enter the name of the person\n')
 
             # User opted to add image from path
             if option == '1':
-                img_path = input(
-                    'Enter the image name with extension stored in images/\n')
+                img_path = input('Enter the image name with extension stored in images/\n')
                 add_user_img_path(user_db, model, name, 'images/' + img_path)
 
             # User opted to use webcam to add user
